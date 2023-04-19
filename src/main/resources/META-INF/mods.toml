@@ -29,7 +29,7 @@ displayName="Fax Craft" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to fax" #optional
+credits="Thanks to fax." #optional
 # A text field displayed in the mod UI
 authors="Emsar" #optional
 # The description text for the mod (multi line!) (#mandatory)
