@@ -12,7 +12,7 @@ public class ItemRegister {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ModMain.MODID);
 
     public static final RegistryObject<Item> bor = ITEMS.register("bor", () ->
-            new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD))
+            new Item(new Item.Properties().tab(ModMain.TAB))
     );
 
     public static void registerItems(IEventBus bus){
