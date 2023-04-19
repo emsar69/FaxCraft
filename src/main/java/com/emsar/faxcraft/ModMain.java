@@ -1,5 +1,6 @@
 package com.emsar.faxcraft;
 
+import com.emsar.faxcraft.util.BlockRegister;
 import com.emsar.faxcraft.util.ItemRegister;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,6 +30,7 @@ public class ModMain
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemRegister.registerItems(bus);
+        BlockRegister.registerBlocks(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

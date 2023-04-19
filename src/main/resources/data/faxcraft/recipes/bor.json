@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "faxcraft:bor_block"
+    }
+  ],
+  "result": {
+    "item": "faxcraft:bor",
+    "count": 9
+  }
+}
