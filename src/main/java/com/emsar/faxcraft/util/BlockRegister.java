@@ -18,7 +18,7 @@ public class BlockRegister {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ModMain.MODID);
 
     public static final RegistryObject<Block> bor_block = register("bor_block", () -> new Block(
-            BlockBehaviour.Properties.of(Material.METAL).strength(9f)
+            BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()
     ));
 
     public static final <T extends Block> RegistryObject<T> register(String name, Supplier<T> supp){
