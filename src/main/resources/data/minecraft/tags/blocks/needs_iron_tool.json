@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "faxcraft:bor_block"
+    "faxcraft:bor_block",
+    "faxcraft:compressor"
   ]
 }

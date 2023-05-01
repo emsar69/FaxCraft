@@ -1,7 +1,10 @@
 {
-  "item.faxcraft.bor": "Bor Madeni",
+  "item.faxcraft.bor": "Bor",
 
-  "block.faxcraft.bor_block": "Bor Bloğu",
+  "block.faxcraft.bor_block": "Bor Block",
+  "block.faxcraft.compressor": "Compressor",
 
-  "itemGroup.main": "Fax Craft"
+  "itemGroup.main": "Fax Craft",
+
+  "title.compressor": "Compressor"
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "faxcraft:block/compressor_top",
+    "front": "faxcraft:block/compressor_front",
+    "side": "faxcraft:block/compressor_side"
+  }
+}
