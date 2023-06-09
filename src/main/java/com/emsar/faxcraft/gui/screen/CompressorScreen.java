@@ -26,6 +26,12 @@ public class CompressorScreen extends AbstractContainerScreen<CompressorMenu> {
         int y = (height-imageHeight)/2;
 
         this.blit(p_97787_, x, y, 0, 0, imageWidth, imageHeight);
+
+        System.out.println(menu.data.get(1));
+
+        if(menu.isCrafting()){
+            this.blit(p_97787_, x+84, y+32, 176, 45, menu.getScaled(), 17);
+        }
     }
 
     @Override

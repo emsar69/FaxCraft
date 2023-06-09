@@ -8,6 +8,8 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -15,6 +17,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 
 public class CompressorMenu extends AbstractContainerMenu {
     private final CompressorEntity entity;
+    public final ContainerData data;
     private final Inventory inv;
 
     public CompressorMenu(int i, Inventory inventory, FriendlyByteBuf friendlyByteBuf) {
@@ -24,6 +27,7 @@ public class CompressorMenu extends AbstractContainerMenu {
         super(MenuRegister.compressor.get(), id);
         this.entity = (CompressorEntity)entity;
         this.inv = inv;
+        this.data = ((CompressorEntity) entity).data;
 
         addPlayerHotBar(inv);
         addPlayerInventory(inv);
@@ -33,6 +37,20 @@ public class CompressorMenu extends AbstractContainerMenu {
             this.addSlot(new CompressorInputSlot(iItemHandler, 1, 65, 32, this.entity));
             this.addSlot(new CompressorOutputSlot(iItemHandler, 2, 115, 32));
         });
+
+        addDataSlots(data);
+    }
+
+    public boolean isCrafting(){
+        return data.get(1) > 0;
+    }
+
+    public int getScaled(){
+        int progress = data.get(1);
+        int maxProgress = data.get(0);
+        int arrowSize = 24;
+
+        return progress != 0 && maxProgress != 0 ? progress*arrowSize/maxProgress : 0;
     }
 
     public void addPlayerInventory(Inventory inv){

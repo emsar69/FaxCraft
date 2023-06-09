@@ -1,0 +1,14 @@
+{
+  "type": "faxcraft:compressor",
+  "ing": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "faxcraft:bor"
+    }
+  ],
+  "output": {
+    "item": "minecraft:diamond"
+  }
+}

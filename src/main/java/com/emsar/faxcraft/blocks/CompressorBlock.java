@@ -34,7 +34,7 @@ public class CompressorBlock extends BaseEntityBlock {
 
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        if(!player.isLocalPlayer()){
+        if(!level.isClientSide()){
             BlockEntity entity = level.getBlockEntity(blockPos);
             if(entity instanceof CompressorEntity){
                 NetworkHooks.openGui((ServerPlayer) player, (MenuProvider) entity, blockPos);
